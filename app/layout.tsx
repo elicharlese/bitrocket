@@ -1,19 +1,21 @@
 import type React from "react"
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
-}
-
-
+import { Providers } from "./providers"
 import './globals.css'
 
 export const metadata = {
-      generator: 'v0.dev'
-    };
+    generator: 'v0.dev'
+}
+
+export default function RootLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body>
+                <Providers>{children}</Providers>
+            </body>
+        </html>
+    )
+}

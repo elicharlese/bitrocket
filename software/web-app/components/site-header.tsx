@@ -37,8 +37,8 @@ export function SiteHeader() {
               className="absolute -inset-1.5 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full blur-xl opacity-40 animate-pulse"
               style={{ animationDuration: "3s" }}
             ></div>
-            <div className="relative bg-black rounded-full p-2">
-              <Zap className="h-6 w-6 text-cyan-300" />
+            <div className="relative bg-white dark:bg-black rounded-full p-2 border border-purple-500/20">
+              <Zap className="h-6 w-6 text-cyan-500 dark:text-cyan-300" />
             </div>
           </div>
           <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-cyan-500 dark:from-white dark:to-cyan-300 bg-clip-text text-transparent">
@@ -48,28 +48,28 @@ export function SiteHeader() {
       </div>
       <nav className="hidden md:flex gap-8">
         <Link
-          className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white transition-colors relative group"
+          className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
           href="/features"
         >
           Features
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
-          className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white transition-colors relative group"
+          className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
           href="/how-it-works"
         >
           How It Works
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
-          className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white transition-colors relative group"
+          className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
           href="/pricing"
         >
           Pricing
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
-          className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white transition-colors relative group"
+          className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
           href="/find-a-charger"
         >
           <div className="flex items-center gap-1">
@@ -79,7 +79,7 @@ export function SiteHeader() {
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
-          className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white transition-colors relative group"
+          className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
           href="/faq"
         >
           FAQ
@@ -87,7 +87,6 @@ export function SiteHeader() {
         </Link>
       </nav>
       <div className="flex items-center gap-4">
-        <ThemeToggle />
         {user ? (
           <UserProfile />
         ) : (
