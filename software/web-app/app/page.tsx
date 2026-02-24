@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 // Replace the existing header with our SiteHeader component
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { Hammock } from "@/components/hammock"
 
 // Neon ring component for cyberpunk aesthetic
 const NeonRing = ({
@@ -565,6 +566,9 @@ export default function Home() {
 
       {/* And replace the footer JSX with: */}
       <SiteFooter />
+      
+      {/* Add the Hammock component */}
+      <Hammock position="bottom-right" size="medium" />
     </div>
   )
 }
